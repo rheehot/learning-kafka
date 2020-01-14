@@ -1,6 +1,6 @@
 # Kafka 정리 자료
 카프카, 데이터 플랫폼의 최강자(고승범 외 1인)를 정리하여 만들었습니다.
-설치에 대한 부분은 자세하게 다루지 않았습니다.
+
 
 # Table of Contents
 * [Chapter 1](./ch1-WhatIsKafka/ch1.md)
