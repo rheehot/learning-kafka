@@ -45,14 +45,20 @@
 
   * 주키퍼 환경 설정 - 기본 설정만 간략하게 변경
   ```yml
-  tickTime=2000  # 측정 단위 시간
-  initLimit=10  # 팔로워가 리더와 초기에 연결하는 시간에 대한 타임 아웃 tick의 횟수
-  syncLimit=5  # 팔로워가 리더와 동기화 하는 시간에 대한 타임 아웃 tick의 횟수
-  dataDir=/data  # 로그와 스냅샷이 저장되는 저장 경로
-  clientPort=2181  # 주키퍼 사용 TCP 포트
-  server.1=alan-zk-test-1.ay1.krane.9rum.cc:2888:3888 # 앙상블을 구성하기 위한 주키퍼 node ID
-  server.2=alan-zk-test-2.ay1.krane.9rum.cc:2888:3888 # 앙상블을 구성하기 위한 주키퍼 node ID
-  server.3=alan-zk-test-3.ay1.krane.9rum.cc:2888:3888 # 앙상블을 구성하기 위한 주키퍼 node ID
+  # 측정 단위 시간
+  tickTime=2000
+  # 팔로워가 리더와 초기에 연결하는 시간에 대한 타임 아웃 tick의 횟수
+  initLimit=10
+  # 팔로워가 리더와 동기화 하는 시간에 대한 타임 아웃 tick의 횟수
+  syncLimit=5
+  # 로그와 스냅샷이 저장되는 저장 경로
+  dataDir=/data
+  # 주키퍼 사용 TCP 포트
+  clientPort=2181
+  # 앙상블을 구성하기 위한 주키퍼 node ID
+  server.1=alan-zk-test-1.ay1.krane.9rum.cc:2888:3888
+  server.2=alan-zk-test-2.ay1.krane.9rum.cc:2888:3888
+  server.3=alan-zk-test-3.ay1.krane.9rum.cc:2888:3888
   ```
 
 * 주키퍼 실행 및 중지  
@@ -103,10 +109,12 @@
   
   * 카프카 환경 설정 - 기본 설정만 간략하게 변경
   ```yml
-  broker.id=broker.id=3 # 호스트ID와 매핑되는 브로커ID
-  log.dirs=/data1 # 로그 데이터를 저장할 디렉토리
-  zookeeper.connect=alan-zk-test-1.ay1.krane.9rum.cc:2181, alan-zk-test-2.ay1.krane.9rum.cc:2181,alan-zk-test-3.ay1.krane.9rum.cc:2181
+  # 호스트ID와 매핑되는 브로커ID
+  broker.id=broker.id=3
+  # 로그 데이터를 저장할 디렉토리
+  log.dirs=/data1
   # 주키퍼 접속 정보
+  zookeeper.connect=alan-zk-test-1.ay1.krane.9rum.cc:2181, alan-zk-test-2.ay1.krane.9rum.cc:2181,alan-zk-test-3.ay1.krane.9rum.cc:2181
   ```
 
 * 카프카 실행 및 중지
