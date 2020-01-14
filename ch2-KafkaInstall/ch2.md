@@ -83,7 +83,7 @@
 
   * 카프카 다운로드
   ```bash
-  $ wget wget http://apache.mirror.cdnetworks.com/kafka/2.3.1/kafka_2.12-2.3.1.tgz
+  $ wget http://apache.mirror.cdnetworks.com/kafka/2.3.1/kafka_2.12-2.3.1.tgz
   ```
 
   * 압축 해제
