@@ -12,7 +12,7 @@
   $ cd /usr/local
   ```
 
-  * 주키퍼 다운로드
+  * 주키퍼 다운로드(3.4.14 버전으로 설치함)
   ```bash
   $ wget http://apache.mirror.cdnetworks.com/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz
   ```
@@ -55,7 +55,7 @@
   dataDir=/data
   # 주키퍼 사용 TCP 포트
   clientPort=2181
-  # 앙상블을 구성하기 위한 주키퍼 node ID
+  # 앙상블을 구성하기 위한 주키퍼 node ID(FQDN or 공인IP)
   server.1=alan-zk-test-1.ay1.krane.9rum.cc:2888:3888
   server.2=alan-zk-test-2.ay1.krane.9rum.cc:2888:3888
   server.3=alan-zk-test-3.ay1.krane.9rum.cc:2888:3888
@@ -81,7 +81,7 @@
   $ cd /usr/local
   ```
 
-  * 카프카 다운로드
+  * 카프카 다운로드(2.3.1 버전으로 설치함)
   ```bash
   $ wget http://apache.mirror.cdnetworks.com/kafka/2.3.1/kafka_2.12-2.3.1.tgz
   ```
