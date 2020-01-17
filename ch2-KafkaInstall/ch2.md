@@ -120,7 +120,7 @@
 * 카프카 실행 및 중지
   * 카프카 실행
   ```bash
-  $ /usr/local/kafka/bin/kafaka-server-start.sh /usr/local/kafka/config/server.properties
+  $ /usr/local/kafka/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties
   ```
 
   * 카프카 실행 중지
