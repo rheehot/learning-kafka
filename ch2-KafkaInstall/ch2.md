@@ -133,9 +133,27 @@
 * TCP 포트 확인
   * 주키퍼의 기본 TCP 포트는 2181이므로 2181 포트가 LISTEN 중인지 체크 
   ```bash
-  netstat -ntlp | grep 2181
+  $ netstat -ntlp | grep 2181
   ```
   * 카프카의 기본 TCP 포트는 9092이므로 9092 포트가 LISTEN 중인지 체크
   ```bash
-  netstat -ntlp | grep 9092
+  $ netstat -ntlp | grep 9092
+  ```
+* 주키퍼 지노드를 이용한 카프카 정보 확인
+  * 주키퍼 CLI를 실행
+  ```bash
+  $ /usr/local/zookeeper/bin/zkCli.sh
+  ```
+  * 주키퍼 지노드 확인
+  ```bash
+  [zk: localhost:2181(CONNECTED)] ls /
+  ```
+  * 브로커 정보 확인
+  ```bash
+  [zk: localhost:2181(CONNECTED)] ls /{지노드 이름}/brokers/ids
+  ```
+* 카프카 로그 확인
+  * cat 명령을 통한 로그 열람
+  ```bash
+  $ cat /usr/local/kafka/logs/server.log
   ```
