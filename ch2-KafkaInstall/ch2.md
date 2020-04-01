@@ -157,3 +157,6 @@
   ```bash
   $ cat /usr/local/kafka/logs/server.log
   ```
+
+### 보충
+* 카프카와 주키퍼의 실행 및 종료 명령은 .sh 파일을 사용하지 않고 .service파일을 systemd에 등록하여 systemctl 명령으로 제어하는 것이 편리함
