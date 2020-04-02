@@ -8,5 +8,4 @@
 * [Chapter 3](./ch3-KafkaDesign/ch3.md)
 * [Chapter 4](./ch4-KafkaProducer/ch4.md)
 * [Chapter 5](./ch5-KafkaConsumer/ch5.md)
-* [Chapter 6](./ch6-KafkaManagementGuide/ch6.md)
 
