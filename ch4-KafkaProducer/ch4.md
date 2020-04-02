@@ -85,4 +85,10 @@ for i in range(1, 11):
 		producer.send('peter-topic2', key='2', value='%d - Apache Kafka is a distributed streaming platform - key=2' % i)
 ```
 ### 프로듀서의 주요 옵션
-* b
+* `boostrap.servers`: 카프카 클러스터에 처음 연결을 하기 위한 호스트와 포트 정보로 구성된 리스트 정보를 나타냄
+* `acks`: 프로듀서가 카프카 토픽의 리더에게 메시지를 보낸 후 요청을 완료하기 전 승인하는 횟수
+* `buffer.memory`: 프로듀서가 카프카 서버로 데이터를 보내기 위해 잠시 대기할 수 있는 전체 메모리 바이트
+* `retries`: 전송에 실패한 데이터를 다시 보내는 횟수
+* `batch.size`: 파티션으로 보내는 여러 데이터를 배치로 함께 보낼 때 배치의 크기 사이즈
+* `linger.ms`:배치 사이즈에 도달하지 못한 상황에서도 제한 시간에 메시지를 전송할 때 사용하는 제한 시간
+* `max.request.size`: 프로듀서가 보낼 수 있는 최대 메시지 바이트 사이즈
