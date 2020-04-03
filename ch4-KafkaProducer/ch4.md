@@ -65,7 +65,7 @@ from kafka.errors import KafkaError
 producer = KafkaProducer(acks=1,retries=1,bootstrap_servers='peter-kafka001:9092,peter-kafka002:9092,peter-kafka003:9092')
 
 for i in range(1, 1001):
- producer.send('peter-topic', b'Apache Kafka is a distributed streaming platform - %d' % i)
+    producer.send('peter-topic', b'Apache Kafka is a distributed streaming platform - %d' % i)
 ```
 * key를 지정하여 특정 파티션으로만 메시지를 보내는 Python 프로듀서 코드
 ```py
@@ -73,10 +73,10 @@ from kafka import KafkaProducer
 
 producer = KafkaProducer(acks=1, compression_type='gzip', bootstrap_servers='peter-kafka001:9092,peter-kafka002:9092,peter-kafka003:9092')
 for i in range(1, 11):
-	if i % 2 == 1:
-		producer.send('peter-topic2', key='1', value='%d - Apache Kafka is a distributed streaming platform - key=1' % i)
- 	else:
-		producer.send('peter-topic2', key='2', value='%d - Apache Kafka is a distributed streaming platform - key=2' % i)
+    if i % 2 == 1:
+		    producer.send('peter-topic2', key='1', value='%d - Apache Kafka is a distributed streaming platform - key=1' % i)
+    else:
+		    producer.send('peter-topic2', key='2', value='%d - Apache Kafka is a distributed streaming platform - key=2' % i)
 ```
 ### 프로듀서의 주요 옵션
 * `boostrap.servers`: 카프카 클러스터에 처음 연결을 하기 위한 호스트와 포트 정보로 구성된 리스트 정보를 나타냄
