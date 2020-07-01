@@ -110,7 +110,7 @@
   * 카프카 환경 설정 - 기본 설정만 간략하게 변경
   ```yml
   # 호스트ID와 매핑되는 브로커ID
-  broker.id=broker.id=3
+  broker.id=3
   # 로그 데이터를 저장할 디렉토리
   log.dirs=/data1
   # 주키퍼 접속 정보
