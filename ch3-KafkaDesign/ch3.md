@@ -76,7 +76,7 @@
   [zk: localhost:2181(CONNECTED)] ls /{지노드 이름}
   ```
   /{지노드 이름}/controller: 현재 카프카 클러스터의 컨트롤러 정보  
-  /{지노드 이름}/brokers: broker.id  
+  /{지노드 이름}/brokers: `broker.id`  
   /{지노드 이름}/consumers: 컨슈머가 각각의 파티션들에 어디까지 었는지에 대한 오프셋 정보  
   /{지노드 이름}/config: 토픽의 상세 설정 정보  
 
