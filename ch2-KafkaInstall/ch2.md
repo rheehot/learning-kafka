@@ -6,6 +6,10 @@
 
 ### 주키퍼 설치 및 실행
 * 카프카와 주키퍼는 `java` 기반으로 동작하기 때문에 `java` 설치가 선행되어야함
+  * 자바 설치
+  ```bash
+  $ yum -y install java-1.8.0-openjdk
+  ```
 * 주키퍼 설치
   * 설치 경로 접근
   ```bash
@@ -22,16 +26,21 @@
   $ tar zxf zookeeper-3.4.14.tar.gz
   ```
 
-  * 심볼릭 링크를 생성하여 버전에 의존성없는 디렉토리 생성
+  * 심볼릭 링크 생성
   ```bash
   $ ln -s zookeeper-3.4.14 zookeeper
   ```
 
   * 스냅샷과 로그를 저장할 디렉토리 생성
   ```bash
-  $ mkdir -p /data{ID}
+  $ mkdir -p /data
   ```
-
+  
+  * myid 파일을 생성
+  ```bash
+  $ vi /data/myid
+  ```
+  
   * 주키퍼 노드 구분을 위한 ID 생성
   ```bash
   $ echo {ID} > /data/myid
@@ -98,7 +107,7 @@
 
   * 로그 데이터를 저장할 디렉토리 생성
   ```bash
-  $ mkdir -p /data{ID}
+  $ mkdir -p /data
   ```
 
 * 카프카 설정
@@ -110,9 +119,9 @@
   * 카프카 환경 설정 - 기본 설정만 간략하게 변경
   ```yml
   # 호스트ID와 매핑되는 브로커ID
-  broker.id=3
+  broker.id=1
   # 로그 데이터를 저장할 디렉토리
-  log.dirs=/data1
+  log.dirs=/data
   # 주키퍼 접속 정보
   zookeeper.connect=alan-zk-test-1.ay1.krane.9rum.cc:2181, alan-zk-test-2.ay1.krane.9rum.cc:2181,alan-zk-test-3.ay1.krane.9rum.cc:2181
   ```
