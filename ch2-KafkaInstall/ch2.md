@@ -73,12 +73,12 @@
 * 주키퍼 실행 및 중지  
   * 주키퍼 실행
   ```bash
-  /usr/local/zookeeper/conf/zkServer.sh start
+  /usr/local/zookeeper/bin/zkServer.sh start
   ```
 
   * 주키퍼 실행 중지 
   ```bash
-  /usr/local/zookeeper/conf/zkServer.sh stop
+  /usr/local/zookeeper/bin/zkServer.sh stop
   ```  
   cf) 주키퍼용 서비스 파일을 만들어서 `systemd`에 등록하고 `systemctl` 명령으로 제어할 수 있음
 
