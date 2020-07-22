@@ -131,7 +131,12 @@
   ```bash
   $ /usr/local/kafka/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties
   ```
-
+  
+  * 카프카 데몬으로 실행
+  ```bash
+  $ /usr/local/kafka/bin/kafka-server-start.sh -daemon /usr/local/kafka/config/server.properties
+  ```
+  
   * 카프카 실행 중지
   ```bash
   $ /usr/local/kafka/bin/kafka-server-stop.sh 
