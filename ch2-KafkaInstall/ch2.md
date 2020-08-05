@@ -123,7 +123,7 @@
   # 로그 데이터를 저장할 디렉토리
   log.dirs=/data
   # 주키퍼 접속 정보
-  zookeeper.connect=alan-zk-test-1.ay1.krane.9rum.cc:2181, alan-zk-test-2.ay1.krane.9rum.cc:2181,alan-zk-test-3.ay1.krane.9rum.cc:2181
+  zookeeper.connect=alan-zk-test-1.ay1.krane.9rum.cc:2181,alan-zk-test-2.ay1.krane.9rum.cc:2181,alan-zk-test-3.ay1.krane.9rum.cc:2181
   ```
 
 * 카프카 실행 및 중지
