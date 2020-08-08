@@ -33,7 +33,7 @@
 
   * 스냅샷과 로그를 저장할 디렉토리 생성
   ```bash
-  $ mkdir -p /data
+  $ mkdir -p /usr/local/data
   ```
   
   * myid 파일을 생성
@@ -107,7 +107,7 @@
 
   * 로그 데이터를 저장할 디렉토리 생성
   ```bash
-  $ mkdir -p /data
+  $ mkdir -p /usr/local/data
   ```
 
 * 카프카 설정
