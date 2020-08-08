@@ -61,7 +61,7 @@
   # 팔로워가 리더와 동기화 하는 시간에 대한 타임 아웃 tick의 횟수
   syncLimit=5
   # 로그와 스냅샷이 저장되는 저장 경로
-  dataDir=/home1/irteamsu/data
+  dataDir=/usr/local/data
   # 주키퍼 사용 TCP 포트
   clientPort=2181
   # 앙상블을 구성하기 위한 주키퍼 node ID(FQDN or 공인IP)
@@ -121,7 +121,7 @@
   # 호스트ID와 매핑되는 브로커ID
   broker.id=1
   # 로그 데이터를 저장할 디렉토리
-  log.dirs=/home1/irteamsu/data
+  log.dirs=/usr/local/data
   # 로그 저장 시간
   log.retention.hours=72
   # 토픽 삭제 가능 여부
@@ -181,62 +181,62 @@
   ```
   
 ### 카프카 명령어 정리
-#### start kafka
+#### 카프카 실행
 ```bash
 $ /usr/local/kafka/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties
 ```
 
-#### show topic list
+#### 토픽 리스트 확인
 ```bash
 $ /usr/local/kafka/bin/kafka-topics.sh --list --zookeeper localhost:2181
 ```
 
-#### create the topic
+#### 토픽 만들기
 ```bash
 $ /usr/local/kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
 ```
 
-#### show the topic
+#### 특정 토픽 메시지 콘솔로 컨슘
 ```bash
 $ /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic numtest
 ```
 
-#### show the topic partiton 1
-```bash
-$ /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --partition 1 --topic numtest
-```
-
-#### delete the topic
-```bash
-$ /usr/local/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic my_topic
-```
-
-#### stop kafka
-```bash
-$ bin/kafka-server-stop.sh config/server.properties
-```
-
-#### consumer groups check!
-```bash
-$ /usr/local/kafka/bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --list
-```
-
-#### consumer status and offset check!
-```bash
-$ /usr/local/kafka/bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --group sr --describe
-```
-
-#### consumer group delete
-```bash
-$ /usr/local/kafka/bin/kafka-consumer-groups.sh --zookeeper localhost:2181 --delete --group <group_name>
-```
-
-#### topic leader follower check 
+#### 특정 토픽에 대해 자세히 확인
 ```bash
 $ /usr/local/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --topic my_topic --describe
 ```
 
-#### server log check
+#### 토픽의 특정 파티션 컨슘
+```bash
+$ /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --partition 1 --topic numtest
+```
+
+#### 토픽 삭제
+```bash
+$ /usr/local/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic my_topic
+```
+
+#### 카프카 실행 멈추기
+```bash
+$ bin/kafka-server-stop.sh config/server.properties
+```
+
+#### 컨슈머 그룹 리스트 확인
+```bash
+$ /usr/local/kafka/bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --list
+```
+
+#### 특정 컨슈머 그룹에 대해 자세히 확인
+```bash
+$ /usr/local/kafka/bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --group sr --describe
+```
+
+#### 특정 컨슈머 그룹 삭제
+```bash
+$ /usr/local/kafka/bin/kafka-consumer-groups.sh --zookeeper localhost:2181 --delete --group <group_name>
+```
+
+#### 카프카 로그 확인
 ```bash
 $ cat /usr/local/bin/kafka/logs/server.log 
 ```
