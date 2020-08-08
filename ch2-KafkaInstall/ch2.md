@@ -61,7 +61,7 @@
   # 팔로워가 리더와 동기화 하는 시간에 대한 타임 아웃 tick의 횟수
   syncLimit=5
   # 로그와 스냅샷이 저장되는 저장 경로
-  dataDir=/data
+  dataDir=/home1/irteamsu/data
   # 주키퍼 사용 TCP 포트
   clientPort=2181
   # 앙상블을 구성하기 위한 주키퍼 node ID(FQDN or 공인IP)
