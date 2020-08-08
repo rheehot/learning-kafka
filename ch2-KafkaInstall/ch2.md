@@ -171,6 +171,67 @@
   ```bash
   $ cat /usr/local/kafka/logs/server.log
   ```
+  
+### 카프카 명령어 정리
+#### start kafka
+```bash
+$ /usr/local/kafka/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties
+```
+
+#### show topic list
+```bash
+$ /usr/local/kafka/bin/kafka-topics.sh --list --zookeeper localhost:2181
+```
+
+#### create the topic
+```bash
+$ /usr/local/kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
+```
+
+#### show the topic
+```bash
+$ /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic numtest
+```
+
+#### show the topic partiton 1
+```bash
+$ /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --partition 1 --topic numtest
+```
+
+#### delete the topic
+```bash
+$ /usr/local/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic my_topic
+```
+
+#### stop kafka
+```bash
+$ bin/kafka-server-stop.sh config/server.properties
+```
+
+#### consumer groups check!
+```bash
+$ /usr/local/kafka/bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --list
+```
+
+#### consumer status and offset check!
+```bash
+$ /usr/local/kafka/bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --group sr --describe
+```
+
+#### consumer group delete
+```bash
+$ /usr/local/kafka/bin/kafka-consumer-groups.sh --zookeeper localhost:2181 --delete --group <group_name>
+```
+
+#### topic leader follower check 
+```bash
+$ /usr/local/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --topic my_topic --describe
+```
+
+#### server log check
+```bash
+$ cat /usr/local/bin/kafka/logs/server.log 
+```
 
 ### 보충
 * 카프카와 주키퍼의 실행 및 종료 명령은 .sh 파일을 사용하지 않고 .service파일을 systemd에 등록하여 systemctl 명령으로 제어하는 것이 편리함
