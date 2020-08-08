@@ -193,27 +193,27 @@ $ /usr/local/kafka/bin/kafka-topics.sh --list --zookeeper localhost:2181
 
 #### 토픽 만들기
 ```bash
-$ /usr/local/kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
+$ /usr/local/kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor <replication-factor_count> --partitions <partition_number> --topic <topic_name>
 ```
 
 #### 특정 토픽 메시지 콘솔로 컨슘
 ```bash
-$ /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic numtest
+$ /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic <topic_name>
 ```
 
 #### 특정 토픽에 대해 자세히 확인
 ```bash
-$ /usr/local/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --topic my_topic --describe
+$ /usr/local/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --topic <topic_name> --describe
 ```
 
 #### 토픽의 특정 파티션 컨슘
 ```bash
-$ /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --partition 1 --topic numtest
+$ /usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --partition <partition_number> --topic <topic_name>
 ```
 
 #### 토픽 삭제
 ```bash
-$ /usr/local/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic my_topic
+$ /usr/local/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic <topic_name>
 ```
 
 #### 카프카 실행 멈추기
@@ -228,7 +228,7 @@ $ /usr/local/kafka/bin/kafka-consumer-groups.sh  --bootstrap-server localhost:90
 
 #### 특정 컨슈머 그룹에 대해 자세히 확인
 ```bash
-$ /usr/local/kafka/bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --group sr --describe
+$ /usr/local/kafka/bin/kafka-consumer-groups.sh  --bootstrap-server localhost:9092 --group <group_name> --describe
 ```
 
 #### 특정 컨슈머 그룹 삭제
