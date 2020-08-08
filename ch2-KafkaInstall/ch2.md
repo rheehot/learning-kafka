@@ -65,9 +65,9 @@
   # 주키퍼 사용 TCP 포트
   clientPort=2181
   # 앙상블을 구성하기 위한 주키퍼 node ID(FQDN or 공인IP)
-  server.1=alan-zk-test-1.ay1.krane.9rum.cc:2888:3888
-  server.2=alan-zk-test-2.ay1.krane.9rum.cc:2888:3888
-  server.3=alan-zk-test-3.ay1.krane.9rum.cc:2888:3888
+  server.1=10.113.155.176:2888:3888
+  server.2=10.113.77.137:2888:3888
+  server.3=10.113.155.175:2888:3888
   ```
 
 * 주키퍼 실행 및 중지  
