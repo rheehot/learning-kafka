@@ -121,9 +121,17 @@
   # 호스트ID와 매핑되는 브로커ID
   broker.id=1
   # 로그 데이터를 저장할 디렉토리
-  log.dirs=/data
+  log.dirs=/home1/irteamsu/data
+  # 로그 저장 시간
+  log.retention.hours=72
+  # 토픽 삭제 가능 여부
+  delete.topic.enable=true
+  # 토픽 동적 생성 가능 여부
+  allow.auto.create.topics=false
+  # 기본 복제 
+  default.replication.factor=3
   # 주키퍼 접속 정보
-  zookeeper.connect=alan-zk-test-1.ay1.krane.9rum.cc:2181,alan-zk-test-2.ay1.krane.9rum.cc:2181,alan-zk-test-3.ay1.krane.9rum.cc:2181
+  zookeeper.connect=10.113.155.176:2181,10.113.77.137:2181,10.113.155.175:2181
   ```
 
 * 카프카 실행 및 중지
